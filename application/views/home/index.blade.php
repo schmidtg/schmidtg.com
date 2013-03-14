@@ -7,15 +7,20 @@
     <figure>
         <ul id="slider">
             <li>
+                <h2><a href="http://www.schmidtg.com/projects/nextlex">Project: NextLex (mobile web app)</a></h2>
+                <p>Technologies: Google Maps API, PHP, Javascript, jQuery Mobile, MySQL, HTML/CSS, Photoshop</p>
+
+                <a href="http://www.schmidtg.com/projects/nextlex">
+                    <img src="/img/projects/nextlex/nextlex.home.png" alt="NextLex - Lexpress bus schedule" />
+                </a>
+            </li>
+            <li>
                 <h2><a href="http://www.eventry.net/">Project: Eventry.net</a></h2>
                 <p>Technologies: Codeigniter, PHP, Javascript, jQuery, MySQL, HTML/CSS, Photoshop</p>
                 
                 <a href="http://www.eventry.net" target="_blank">
                     <img src="/img/projects/eventry/eventry.net.png" alt="Eventry.net - Home screen" />
                 </a>
-                <figcaption>
-                    Login Screen
-                </figcaption>
             </li>
             <li>
                 <h2><a href="http://www.saskhighland.ca/">Project: Saskhighland.ca</a></h2>
@@ -24,20 +29,6 @@
                 <a href="http://www.saskhighland.ca/">
                     <img src="/img/projects/saskhighland/saskhighland.ca.png" alt="Saskatchewan Highland Gathering &amp; Celtic Gathering" />
                 </a>
-                <figcaption>
-                    Choose Screen
-                </figcaption>
-            </li>
-            <li>
-                <h2><a href="http://www.schmidtg.com/projects/nextlex">Project: Lexpress</a></h2>
-                <p>Technologies: Google Maps API, PHP, Javascript, jQuery Mobile, MySQL, HTML/CSS, Photoshop</p>
-
-                <a href="http://www.schmidtg.com/projects/nextlex">
-                    <img src="/img/projects/eventry/3-eventry-form.png" alt="Eventry.net - Form screen" />
-                </a>
-                <figcaption>
-                    Form Screen
-                </figcaption>
             </li>
             <li>
                 <h2><a href="http://www.cmapllc.com/">Project: CMAP LLC</a></h2>
@@ -46,9 +37,6 @@
                 <a href="http://www.cmapllc.com" target="_blank">
                     <img src="/img/projects/cmap/cmapllc.com.png" alt="Cmap LLC" />
                 </a>
-                <figcaption>
-                    Confirmation Screen
-                </figcaption>
             </li>
             <li>
                 <h2><a href="http://www.winnipegscottishfestival.org/">Project: Winnipeg Scottish Festival</a></h2>
@@ -57,9 +45,6 @@
                 <a href="http://www.winnipegscottishfestival.org" target="_blank">
                     <img src="/img/projects/wsf/winnipeg-scottish-festival.png" alt="Winnipeg Scottish Festival" />
                 </a>
-                <figcaption>
-                    Dashboard Screen
-                </figcaption>
             </li>
         </ul>
     </figure>

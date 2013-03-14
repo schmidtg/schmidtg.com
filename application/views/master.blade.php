@@ -18,10 +18,10 @@
             <li>
                 <a href="/">Home</a>
             </li>
+            <!--
             <li>
                 <a href="/work">Work</a>
             </li>
-            <!--
             <li>
                 <a href="/blog">Blog</a>
             </li>
@@ -51,10 +51,10 @@
             <li>
                 <a href="/">Home</a>
             </li>
+            <!--
             <li>
                 <a href="/work">Work</a>
             </li>
-            <!--
             <li>
                 <a href="/blog">Blog</a>
             </li>
