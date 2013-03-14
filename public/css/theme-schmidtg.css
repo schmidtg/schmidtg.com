@@ -12,7 +12,7 @@
 /* change the ID & dimensions to match your slider */
 #slider {
 	width: 960px;
-	height: 403px;
+	height: 453px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
 	overflow-y: auto;

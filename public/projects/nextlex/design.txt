@@ -1,0 +1,57 @@
+****************
+IMPLEMENTATION
+****************
+I used a traditional LAMP stack to setup this single-page web app. It's primary use is for mobile, which is why I chose to use the popular and effective jQuery Mobile framework. jQuery mobile provides reliable and best-practice methods for handling cross-platform mobile browser issues. In addition to using jQuery, I also used Handlebars to assist with the template output of my various views. I made extensive use of the Google Maps API v3 to handle all of the map related duties.
+
+DATABASE OVERVIEW
+I needed to structure the original CSV (seeds/data.csv) so I could easily query and load all the appropriate stop times for the schedule. I used four tables:
+
+    routes
+    store the route_id known by the Lexpress staff, along with a full name, directions to and from the halfway point, and a route color for displaying on the Google Map
+
+    stop_times
+    lists all of the arrival_times for each stop (referenced via the SHORTCODE) and the stop_id (foreign key to 'stops'). This table took a while to create as I needed to dissect the crude paper schedule located here (http://ci.lexington.ma.us/Lexpressroute_busschedule.pdf) and create a stop time for each stop sequence provided via the seeds/data.csv. This was necessary in order to determine the next time the bus was planning to stop at the nearby location (I wouldn't have been able to use a formula as that's too naive an approach).
+
+    stops
+    These are all the physical stops for each route (1 - 6). The stop sequence, although not shown in the app itself, is used for ordering and for setting up the 'stop_times' table. route_num maps the stop to a route and direction provides insight into whether the stop is before or after the known halfway point, as all routes are circular. The index for this table is composite, consisting of the columns 'shortcode', 'stop_sequence', and 'route_num'. I also added a 'route_num' index to optimize joins with the routes table.
+
+    stops_meta
+    These are each of the physical stops for all routes. I provide the full name of the stop along with its latitude/longitude coordinate. It's index is 'shortcode' as this references the 'stops' table.
+
+MODELS
+I had to write many custom SQL queries. The most complicated one involved finding the nearest stops to your current location. I needed to construct multiple queries where I applied UNION ALL to get the closest stops for each route nearest the location. I also needed to filter on the current time too which proved complicated but manageable via SQL.
+
+Many of the methods in this models file return data (except for some SQL helpers) and thus I've set a default of json_encode() for those that return JSON.
+
+To get the closest stops, I also made use of the Haversine Formula (originally snipped from http://stackoverflow.com/questions/4645490/get-nearest-places-google-maps-mysql-spatial-data). This formular would calculate the straight line distance between the current location and the stop. I used this as the basis for ordering nearest stops. In the JS app, I also use Google Map walking directions to provide estimated time and distance when following the curve of known streets.
+
+CSS
+I created a jQuery mobile theme using their themeroller: http://jquerymobile.com/themeroller/?ver=1.2.0&style_id=20121207-128
+I made slight customizations to this which I add to custom.css
+
+VIEWS
+I'm making extensive use of the single-page app design. I use one view, main.php, where I load my initial DOM elements and manipulate any further DOM elements via my main javascript file. After the document has been loaded, I initialize my main JS method, NextLexpress.init(), with a JS object containing many DOM containers, templates and various default settings. This helps to separate the initialization concerns from the JS itself.
+
+I'm using the Google Font, Opens sans, to render my text and give the app a more interesting look.
+
+JAVASCRIPT
+I originally built this main.js as a prototype following an organization I'm used to for buidling JS apps. I use an init() to start-up the app, which accepts init configurations along with setting up bindings and compiling JS templates. My original intentions were to build the prototype, and then rebuild much of this codebase using backbone.js, however this proved much more difficult than expected so I abandoned this idea. I'd love to revisit this for future versions.
+
+I tried my best to separate Helpers, and common Google Map functions. I used underscore.js for some of it's handy utility methods like 'pluck'. Otherwise, I make extensive use of jQuery's DOM manipulation and it's AJAX library. Anytime I injected new data into the DOM, I needed to fire "listview" refreshes as part of jQuery mobile.
+
+I originally wanted to write a series of tests to go along with this project, but that proved too ambitious for the timeline provided. Definitely for future versions.
+
+I used jshint.com to lint my code and fix any potential javascript errors.
+
+****************
+CUSTOMIZATIONS
+****************
+I loaded the InfoBox.js plugin (http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js) to handle custom-styled InfoWindows for Google Maps v3.
+
+****************
+REFERENCES
+****************
+As with any software project, I made extensive use of Stackoverflow.com for bits of advice and the odd code sample to speed along my development. I did my best to document these references where appropriate.
+
+Lexpress contact info, schedule
+http://ci.lexington.ma.us/dpw/lexpress.cfm

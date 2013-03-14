@@ -1,0 +1,39 @@
+.ui-li-desc {
+	font-size: 14px;
+}
+.ui-header .ui-title, .ui-footer .ui-title {
+	font-size: 19px;
+	/* margin: .4em 30% .4em; */
+}
+.ui-header .ui-btn-inner, .ui-footer .ui-btn-inner, .ui-mini .ui-btn-inner {
+	padding: .25em 11px .5em;
+}
+#home .ui-content {
+	/* padding:6px; */
+}
+#location .ui-collapsible-content {
+	padding: 0;
+}
+
+.panel {
+	width: 310px;
+	padding: 5px;
+	color: #000;
+	background-color: #FFF;
+	text-shadow: none;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.google_map { 
+	width: 288px;
+	height: 500px;
+	margin: 0 auto;
+	border: 1px solid #FFF;
+}
+
+.info_window {
+	font-size: 12px;
+	color: #FFF;
+	text-shadow: 0 0 1px #000;
+}

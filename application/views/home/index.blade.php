@@ -3,37 +3,60 @@
 @section('content')
 
 <section class="projects container">
-    <h2><a href="http://www.eventry.net/">Eventry.net</a></h2>
-    <p>Technologies: PHP, Javascript, MySQL, HTML/CSS</p>
 
     <figure>
         <ul id="slider">
             <li>
-                <img src="/img/projects/eventry/1-eventry-home.png" alt="Eventry.net - Home screen" />
+                <h2><a href="http://www.eventry.net/">Project: Eventry.net</a></h2>
+                <p>Technologies: Codeigniter, PHP, Javascript, jQuery, MySQL, HTML/CSS, Photoshop</p>
+                
+                <a href="http://www.eventry.net" target="_blank">
+                    <img src="/img/projects/eventry/eventry.net.png" alt="Eventry.net - Home screen" />
+                </a>
                 <figcaption>
                     Login Screen
                 </figcaption>
             </li>
             <li>
-                <img src="/img/projects/eventry/2-eventry-choose.png" alt="Eventry.net - Choose screen" />
+                <h2><a href="http://www.saskhighland.ca/">Project: Saskhighland.ca</a></h2>
+                <p>Technologies: Laravel, PHP, Javascript, MySQL, HTML/CSS, Photoshop</p>
+
+                <a href="http://www.saskhighland.ca/">
+                    <img src="/img/projects/saskhighland/saskhighland.ca.png" alt="Saskatchewan Highland Gathering &amp; Celtic Gathering" />
+                </a>
                 <figcaption>
                     Choose Screen
                 </figcaption>
             </li>
             <li>
-                <img src="/img/projects/eventry/3-eventry-form.png" alt="Eventry.net - Form screen" />
+                <h2><a href="http://www.schmidtg.com/projects/nextlex">Project: Lexpress</a></h2>
+                <p>Technologies: Google Maps API, PHP, Javascript, jQuery Mobile, MySQL, HTML/CSS, Photoshop</p>
+
+                <a href="http://www.schmidtg.com/projects/nextlex">
+                    <img src="/img/projects/eventry/3-eventry-form.png" alt="Eventry.net - Form screen" />
+                </a>
                 <figcaption>
                     Form Screen
                 </figcaption>
             </li>
             <li>
-                <img src="/img/projects/eventry/4-eventry-confirm.png" alt="Eventry.net - Confirmation screen" />
+                <h2><a href="http://www.cmapllc.com/">Project: CMAP LLC</a></h2>
+                <p>Technologies: Wordpress, PHP, Javascript, MySQL, HTML/CSS, Photoshop</p>
+
+                <a href="http://www.cmapllc.com" target="_blank">
+                    <img src="/img/projects/cmap/cmapllc.com.png" alt="Cmap LLC" />
+                </a>
                 <figcaption>
                     Confirmation Screen
                 </figcaption>
             </li>
             <li>
-                <img src="/img/projects/eventry/5-eventry-dash.png" alt="Eventry.net - Dashboard screen" />
+                <h2><a href="http://www.winnipegscottishfestival.org/">Project: Winnipeg Scottish Festival</a></h2>
+                <p>Technologies: HTML/CSS, Javascript, Photoshop</p>
+
+                <a href="http://www.winnipegscottishfestival.org" target="_blank">
+                    <img src="/img/projects/wsf/winnipeg-scottish-festival.png" alt="Winnipeg Scottish Festival" />
+                </a>
                 <figcaption>
                     Dashboard Screen
                 </figcaption>
@@ -63,7 +86,8 @@
 		// DOM Ready
 		$(function(){
 			$('#slider').anythingSlider({
-            	buildStartStop: false 
+            	buildStartStop: false,
+            	autoPlay: true 
             });
 		});
 	</script>

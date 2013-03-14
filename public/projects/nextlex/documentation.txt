@@ -1,0 +1,75 @@
+****************
+OVERVIEW
+****************
+Based on your location, determine when the next Lexpress Bus will be making a scheduled stop. Look up route maps, scheduled stop times, and walking directions for each stop.
+
+****************
+CONFIGURATION
+****************
+1. Setup a localhost database, and load the SQL file: ''nextlex.sql' (located in 'sql' directory)
+2. Update the DATABASE, USERNAME and PASSWORD info in /inc/constants.php
+3. Update where the SERVER is located (default is 'localhost') and provide a base url, BASE_URL.
+
+****************
+SCREENCAST URL
+****************
+http://youtu.be/1mr2B5FGfwI
+
+****************
+USAGE
+****************
+
+Random Location - 0 or 1
+Because this mobile web-app is geolocation based, I created a 'random' mode to choose a random geoposition within 1 mile of the main Depot. Please toggle this setting in the .init() configuration under 'views/main.php' by chooseing '0' (use your current geolocation) or '1' (use a random location within 1 mile).
+
+Current Time
+Lexpress operates between 6:30am and 6pm. Using the app outside of these hours will yield no results for the next stop.
+
+****************
+ORGANIZATION
+****************
+I structured this app similarly to the basic framework provided by the last CS50 project with a few modifications:
+
+|~css/
+   Where the CSS files and related images are located. I'm also using jQuery Mobile which fetches a CSS file from the web.
+
+|~images/
+   Location of various markers for the map. I created these in Photoshop and kept the raw PSDs for any future edits.
+
+|~inc/
+  |-config.php - include files for PHP app
+  |-constants.php - allow you to configure base constants in use in the PHP app
+  |-functions.php - shared helper files (e.g. query())
+
+|~iphone/
+   Preview of app loaded in iframe. NOTE: You must change the iframe URL to your BASE_URL in order to view this.
+
+|~js/
+  |-main.js - Main javascript file.
+  |+lib/
+    |-handlebars-1.0.rc.1.js - javascript template framework
+
+|~models/
+  |-nextlex.php - PHP methods that use SQL queries to fetch and return data in JSON format
+
+|~seeds/
+  |-data.csv - the original data feed I was provided by the Town of Lexington
+  |-seeds.php - some PHP functions I wrote to assist populating my DB table
+
+|~sql/
+  |-nextlex.sql - DB dump of need tables for Next Lexpress app
+
+|~views/
+  |-main.php - Main PHP view that gets loaded to display single-page app.
+
+index.php - main controller for app
+design.txt
+documentation.txt
+
+
+****************
+THANK YOU
+****************
+I'd like to thank the Town of Lexington for providing me permission to use it's dataset for Lexpress routes.
+I'd like to thank the CS50 team for providing the direction, leadership and base framework for this project.
+I'd like to thank my wife, Jeanette, for providing the original idea for this project as something she could promote through her job.
