@@ -3,55 +3,86 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Laravel: A Framework For Web Artisans</title>
+	<title>Graham Schmidt - Software Engineer</title>
 	<meta name="viewport" content="width=device-width">
-	{{ HTML::style('laravel/css/style.css') }}
+	{{ HTML::style('/css/base.css') }}
+	{{ HTML::style('/css/layout.css') }}
+	{{ HTML::style('/css/skeleton.css') }}
+	{{ HTML::style('/css/styles.css') }}
 </head>
 <body>
-	<div class="wrapper">
-		<header>
-			<h1>Laravel</h1>
-			<h2>A Framework For Web Artisans</h2>
 
-			<p class="intro-text" style="margin-top: 45px;">
-			</p>
-		</header>
-		<div role="main" class="main">
-			<div class="home">
-				<h2>Learn the terrain.</h2>
+<header>
+    <div class="logo"></div>
+    <h1>Hi, I'm Graham</h1>
+    <p>I work as a full-time software engineer for <a href="http://www.nutraclick.com/">NutraClick</a>. I’m passionate about web technologies, love craft beer, and play a mean bagpipe.</p>
+    <img src="/img/graham-schmidt-software-engineer.jpg" alt="Graham Schmidt - Software Engineer" class="profile shadow" width="189" height="187" />
+</header>
 
-				<p>
-					You've landed yourself on our default home page. The route that
-					is generating this page lives at:
-				</p>
+<section class="projects container">
+    <h2><a href="http://www.eventry.net/">Eventry.net</a></h2>
+    <p>Technologies: PHP, Javascript, MySQL, HTML/CSS</p>
 
-				<pre>{{ path('app') }}routes.php</pre>
+    <figure>
+        <ul id="slider">
+            <li>
+                <img src="/img/projects/eventry/1-eventry-home.png" alt="Eventry.net - Home screen" />
+                <figcaption>
+                    Login Screen
+                </figcaption>
+            </li>
+            <li>
+                <img src="/img/projects/eventry/2-eventry-choose.png" alt="Eventry.net - Choose screen" />
+                <figcaption>
+                    Choose Screen
+                </figcaption>
+            </li>
+            <li>
+                <img src="/img/projects/eventry/3-eventry-form.png" alt="Eventry.net - Form screen" />
+                <figcaption>
+                    Form Screen
+                </figcaption>
+            </li>
+            <li>
+                <img src="/img/projects/eventry/4-eventry-confirm.png" alt="Eventry.net - Confirmation screen" />
+                <figcaption>
+                    Confirmation Screen
+                </figcaption>
+            </li>
+            <li>
+                <img src="/img/projects/eventry/5-eventry-dash.png" alt="Eventry.net - Dashboard screen" />
+                <figcaption>
+                    Dashboard Screen
+                </figcaption>
+            </li>
+        </ul>
+    </figure>
 
-				<p>And the view sitting before you can be found at:</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
 
-				<pre>{{ path('app') }}views/home/index.blade.php</pre>
+</section>
 
-				<h2>Grow in knowledge.</h2>
+<footer>
+</footer>
 
-				<p>
-					Learning to use Laravel is amazingly simple thanks to
-					its {{ HTML::link('docs', 'wonderful documentation') }}.
-				</p>
+	{{ HTML::script(URL::$base.'/js/modernizr-2.5.3.min.js') }}
+	{{ HTML::script('http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js') }}
+	
+	<!-- Anything Slider -->
+	{{ HTML::style('/bundles/AnythingSlider/css/theme-schmidtg.css') }}
+	{{ HTML::script(URL::$base.'/bundles/AnythingSlider/js/jquery.anythingslider.min.js') }}
 
-				<h2>Create something beautiful.</h2>
+	<!-- AnythingSlider initialization -->
+	<script>
+		// DOM Ready
+		$(function(){
+			$('#slider').anythingSlider({
+            	buildStartStop: false 
+            });
+		});
+	</script>
 
-				<p>
-					Now that you're up and running, it's time to start creating!
-					Here are some links to help you get started:
-				</p>
 
-				<ul class="out-links">
-					<li><a href="http://laravel.com">Official Website</a></li>
-					<li><a href="http://forums.laravel.com">Laravel Forums</a></li>
-					<li><a href="http://github.com/laravel/laravel">GitHub Repository</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
 </body>
 </html>

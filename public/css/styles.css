@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Rokkitt:700|Titillium+Web:300);
+
+body {
+	background: url(../img/bg/bg-main.jpg) 0 0 #f0f0f0;
+	font-family: 'Titillium Web', serif;
+	font-size: 1.2em;
+	line-height: 1.4;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Headings
+|--------------------------------------------------------------------------
+*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Rokkitt', serif;
+}
+h1 {
+	font-size: 60px;
+	color: #fff;
+	text-shadow: 1px 1px 0 #000;
+}
+h2 {
+	color: #25333b;
+	font-size: 48px;
+	text-shadow: 1px 1px 0 #fff;
+	padding: 1px 0;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Containers
+|--------------------------------------------------------------------------
+*/
+.projects {
+	position: relative;
+	padding-top: 150px;
+	text-align: center;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Branding
+|--------------------------------------------------------------------------
+*/
+header {
+	background: url(../img/bg/bg-header.jpg) 0 0 #041a2e repeat-x;
+	height: 435px;
+	padding: 43px 0 0 0;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 0 #000;
+
+}
+
+.logo {
+	margin: 0 auto;
+	position: relative;
+	background: url(../img/monogram-schmidtg.png) 0 0 transparent;
+	width: 130px;
+	height: 129px;
+}
+
+header p {
+	margin: 0 auto;
+	width: 600px;
+	font-size: 22px;
+}
+
+.profile {
+	margin: 50px 0 0 0;
+}
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Links
+|--------------------------------------------------------------------------
+*/
+a:link {
+	color: #dc5729;
+}
+a:visited {
+	color: #a64726;
+}
+a:hover: {
+	text-decoration: none;
+}
+h2 a:link,
+h2 a:active,
+h2 a:visited {
+	color: #25333b;
+	text-decoration: none;
+	border-bottom: 1px dashed #25333b;
+}
+h2 a:hover {
+	border: none;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Effects
+|--------------------------------------------------------------------------
+*/
+.shadow {
+    -webkit-box-shadow : 0px 0px 100px -10px rgb(22, 25, 46);
+    -moz-box-shadow    : 0px 0px 100px -10px rgb(22, 25, 46);
+    box-shadow         : 0px 0px 100px -10px rgb(22, 25, 46);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Images & captions
+|--------------------------------------------------------------------------
+*/
+figure {
+	text-align: center;
+	margin: 0 auto;
+}
+
+figure img {
+	z-index: 50;
+}
+
+.img_container {
+    position: relative;
+    width: 960px;
+    height: 403px;
+    text-align: center;
+    overflow: hidden;
+}
+
+figcaption {
+	text-align: left;
+	z-index: 100;
+	background: url(../img/bg/bg-title.gif) 0 0 #f0f0f0;
+	padding: 5px 20px;
+	border-bottom: 1px solid #adadad;
+}
+
+
