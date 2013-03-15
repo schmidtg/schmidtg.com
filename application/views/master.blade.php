@@ -25,12 +25,12 @@
             <li>
                 <a href="/blog">Blog</a>
             </li>
-            <li>
-                <a href="/about">About</a>
-            </li>
             -->
             <li>
                 <a href="/about">About</a>
+            </li>
+            <li>
+                <a href="/assets/pdf/Graham-Schmidt-Resume-Full-Stack-Developer.pdf">Resume</a>
             </li>
         </ul>
     </nav>
@@ -64,6 +64,9 @@
             -->
             <li>
                 <a href="/about">About</a>
+            </li>
+            <li>
+                <a href="/assets/pdf/Graham-Schmidt-Resume-Full-Stack-Developer.pdf">Resume</a>
             </li>
         </ul>
     </nav>
