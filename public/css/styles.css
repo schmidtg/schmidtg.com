@@ -41,6 +41,11 @@ h2 {
 .container {
 	width: 1310px;
 }
+.container-960 {
+	width: 690px;
+	text-align: left;
+	padding-top: 160px;
+}
 
 /*
 |--------------------------------------------------------------------------
