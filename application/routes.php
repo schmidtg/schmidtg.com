@@ -6,6 +6,11 @@ Route::get('/contact'   , 'home@contact');
 Route::get('/about'     , 'home@about');
 Route::get('/work'      , 'home@work');
 
+// rewrites
+Route::get('/lexpress/app', function() {
+	return Redirect::to('/projects/nextlex/');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers
