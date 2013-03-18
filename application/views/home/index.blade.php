@@ -71,8 +71,7 @@
 		// DOM Ready
 		$(function(){
 			$('#slider').anythingSlider({
-            	buildStartStop: false,
-            	autoPlay: true 
+            	buildStartStop: false
             });
 		});
 	</script>
