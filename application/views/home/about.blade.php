@@ -6,7 +6,7 @@
 
     <h2>About me</h2>
     <p>
-    Give me any project, and I'll give 110% effort every time in order to make things succeed. My greatest pleasure is seeing things work well and to the satisfaction of the stakeholders. 
+    Give me any project, and I'll give 110% effort every time in order to make things succeed. My greatest pleasure is seeing things work well and to the satisfaction of the stakeholders.
     </p>
 
     <p>
@@ -30,12 +30,9 @@
     <p>
     Currently my wife and I call the great city of Boston home,  but my favorite time of year is flying home to the Canadian prairies to make homemade sausage with my family every Xmas.
     </p>
-    
+
     <h2>Where you can find me</h2>
     <ul>
-        <li>
-            <a href="https://bitbucket.org/hfmgraham/">Bitbucket</a>
-        </li>
         <li>
             <a href="https://github.com/schmidtg">Github</a>
         </li>
