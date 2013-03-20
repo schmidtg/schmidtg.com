@@ -14,10 +14,14 @@
     define("PASSWORD", "F8=r*vA&A8aHabaj");
 
     define("SERVER", "localhost");
-    define("BASE_URL", "http://local.nextlex.com/");
-
-    // define("SERVER", "pipebox.netfirmsmysql.com");
-    // define("BASE_URL", "http://www.schmidtg.com/nextlexpress/app/");
+    if ( stristr($_SERVER['HTTP_HOST'], 'local') )
+    {
+        define("BASE_URL", "http://local.nextlex.com/");
+    }
+    else
+    {
+        define("BASE_URL", "http://www.schmidtg.com/projects/nextlex/");
+    }
 
     define("CENTER_TOWN_LAT", 42.448211);
     define("CENTER_TOWN_LNG", -71.228729);
