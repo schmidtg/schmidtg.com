@@ -30,7 +30,7 @@
                 <a href="/about">About</a>
             </li>
             <li>
-                <a href="/assets/pdf/Graham-Schmidt-Resume-Full-Stack-Developer.pdf">Resume</a>
+                <a href="/resume">Resume</a>
             </li>
         </ul>
     </nav>
@@ -66,7 +66,7 @@
                 <a href="/about">About</a>
             </li>
             <li>
-                <a href="/assets/pdf/Graham-Schmidt-Resume-Full-Stack-Developer.pdf">Resume</a>
+                <a href="/resume">Resume</a>
             </li>
         </ul>
     </nav>

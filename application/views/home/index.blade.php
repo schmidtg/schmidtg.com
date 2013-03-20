@@ -71,7 +71,8 @@
 		// DOM Ready
 		$(function(){
 			$('#slider').anythingSlider({
-            	buildStartStop: false
+            	buildStartStop: false,
+            	hashTags: false
             });
 		});
 	</script>

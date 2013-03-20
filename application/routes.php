@@ -10,6 +10,11 @@ Route::get('/work'      , 'home@work');
 Route::get('/lexpress/app', function() {
 	return Redirect::to('/projects/nextlex/');
 });
+// rewrites
+Route::get('/resume', function() {
+	return Response::download('public/assets/pdf/Graham-Schmidt-Resume-Full-Stack-Developer.pdf', 'Graham-Schmidt-Resume-Full-Stack-Developer.pdf');
+});
+
 
 /*
 |--------------------------------------------------------------------------
