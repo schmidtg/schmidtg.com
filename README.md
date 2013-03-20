@@ -1,0 +1,4 @@
+schmidtg.com
+============
+
+personal site
