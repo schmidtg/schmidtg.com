@@ -38,9 +38,6 @@ h2 {
 	padding-top: 220px;
 	text-align: center;
 }
-.container {
-	/* width: 1310px; */
-}
 .container-960 {
 	max-width: 690px;
 	text-align: left;
@@ -71,7 +68,7 @@ header {
 
 header p {
 	margin: 0 auto;
-	width: 500px;
+	max-width: 500px;
 	font-size: 22px;
 }
 
@@ -107,7 +104,7 @@ footer nav a:link {
 */
 nav {
 	margin: 0 auto;
-	width: 400px;
+	max-width: 400px;
 	font-size: 16px;
 	text-transform: uppercase;
 	padding: 16px 0 0 0;
@@ -191,7 +188,7 @@ figure img {
 
 .img_container {
     position: relative;
-    width: 960px;
+    max-width: 960px;
     height: 403px;
     text-align: center;
     overflow: hidden;

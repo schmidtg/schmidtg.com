@@ -53,7 +53,7 @@
     </a>
 
     <h1>Hi, I'm Graham</h1>
-    <p>I work as a full-time software engineer for <a href="http://www.nutraclick.com/">NutraClick</a>. I’m passionate about web technologies, <br>love craft beer, and play a mean bagpipe.</p>
+    <p>I work as a full-time software engineer for <a href="http://www.nutraclick.com/">NutraClick</a>. I’m passionate about web technologies, love craft beer, and play a mean bagpipe.</p>
     <img src="/img/graham-schmidt-software-engineer.jpg" alt="Graham Schmidt - Software Engineer" class="profile shadow" width="189" height="187" />
 </header>
 
