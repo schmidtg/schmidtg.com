@@ -8,11 +8,11 @@ Route::get('/work'      , 'home@work');
 
 // rewrites
 Route::get('/lexpress/app', function() {
-	return Redirect::to('/projects/nextlex/');
+  return Redirect::to('/projects/nextlex/');
 });
 // rewrites
 Route::get('/resume', function() {
-	return Response::download('public/assets/pdf/Graham-Schmidt-Resume-Full-Stack-Developer.pdf', 'Graham-Schmidt-Resume-Full-Stack-Developer.pdf');
+  return Response::download('public/assets/pdf/graham-schmidt-software-engineer.pdf', 'graham-schmidt-software-engineer.pdf');
 });
 
 
@@ -33,12 +33,12 @@ Route::get('/resume', function() {
 
 Event::listen('404', function()
 {
-	return Response::error('404');
+  return Response::error('404');
 });
 
 Event::listen('500', function()
 {
-	return Response::error('500');
+  return Response::error('500');
 });
 
 /*
@@ -55,36 +55,36 @@ Event::listen('500', function()
 |
 | First, define a filter:
 |
-|		Route::filter('filter', function()
-|		{
-|			return 'Filtered!';
-|		});
+|   Route::filter('filter', function()
+|   {
+|     return 'Filtered!';
+|   });
 |
 | Next, attach the filter to a route:
 |
-|		Route::get('/', array('before' => 'filter', function()
-|		{
-|			return 'Hello World!';
-|		}));
+|   Route::get('/', array('before' => 'filter', function()
+|   {
+|     return 'Hello World!';
+|   }));
 |
 */
 
 Route::filter('before', function()
 {
-	// Do stuff before every request to your application...
+  // Do stuff before every request to your application...
 });
 
 Route::filter('after', function($response)
 {
-	// Do stuff after every request to your application...
+  // Do stuff after every request to your application...
 });
 
 Route::filter('csrf', function()
 {
-	if (Request::forged()) return Response::error('500');
+  if (Request::forged()) return Response::error('500');
 });
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::to('login');
+  if (Auth::guest()) return Redirect::to('login');
 });
