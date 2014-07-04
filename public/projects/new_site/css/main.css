@@ -110,7 +110,7 @@ footer nav a:link {
 | Navigation
 |--------------------------------------------------------------------------
 
-nav {
+/*nav {
   margin: 0 auto;
   max-width: 400px;
   font-size: 16px;
@@ -142,7 +142,7 @@ nav a:hover {
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-
+*/
 /*
 |--------------------------------------------------------------------------
 | Links
