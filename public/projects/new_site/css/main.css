@@ -9,10 +9,13 @@ body {
   padding: 0;
   background: url(../images/bg/bg-main.jpg) 0 0 #f0f0f0;
   font-family: 'Titillium Web', serif;
+  font-size: 16px;
+  line-height: 24px;
   -webkit-transition: font-size 1s ease;
   -moz-transition: font-size 1s ease;
   -o-transition: font-size 1s ease;
   transition: font-size 1s ease;
+  position: relative;
 }
 
 /*
@@ -35,7 +38,6 @@ h2 {
   padding: 1px 0;
 }
 
-
 /*
 |--------------------------------------------------------------------------
 | Containers
@@ -44,12 +46,13 @@ h2 {
 .projects {
   position: relative;
   padding-top: 220px;
-  text-align: center;
 }
-.container-960 {
-  max-width: 690px;
-  text-align: left;
-  padding-top: 160px;
+
+@media (min-width: 992px) {
+  .col-md-8 {
+    float: none;
+    margin: 0 auto;
+  }
 }
 
 /*
@@ -72,77 +75,58 @@ header {
   background: url(../images/monogram-schmidtg.png) 0 0 transparent;
   width: 130px;
   height: 129px;
+  text-align: center;
 }
 
 header p {
   margin: 0 auto;
   max-width: 500px;
   font-size: 22px;
+  line-height: 1;
 }
 
 .profile {
-  margin: 50px 0 0 0;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 185px;
+  height: 185px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  background: url(../images/graham-schmidt-software-engineer.jpg) -3px -2px no-repeat;
+  border: 3px solid white;
 }
-
 
 /*
 |--------------------------------------------------------------------------
-| Footer
-|--------------------------------------------------------------------------
-*/
-footer {
-  text-align: center;
-}
-
-footer nav {
-  margin-top: 60px;
-  border-top: 1px solid #dadada;
-}
-
-footer nav a:link {
-  color: #577591;
-  text-decoration: none;
-}
-
-
-
-|--------------------------------------------------------------------------
 | Navigation
 |--------------------------------------------------------------------------
+*/
 
-/*nav {
+.navbar .nav {
   margin: 0 auto;
   max-width: 400px;
   font-size: 16px;
   text-transform: uppercase;
   padding: 16px 0 0 0;
-}
-
-nav li {
-  list-style: none;
   display: inline-block;
+  float: none;
 }
 
-nav li a {
-  padding: 2px 5px;
-  margin: 3px 6px;
-}
-
-nav a:link {
-  color: #577591;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #ffffff;
-  background-color: #d45a30;
+.navbar .nav > li > a {
+  color: #dc5729;
   text-shadow: none;
-
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
 }
-*/
+
+.navbar .nav > li > a:hover {
+  color: white;
+}
+
+.top-header {
+  background-color: black;
+  border-bottom: 1px solid #4B1B0A;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Links
@@ -182,32 +166,30 @@ h2 a:hover {
 
 /*
 |--------------------------------------------------------------------------
-| Images & captions
+| Carousel
 |--------------------------------------------------------------------------
 */
-figure {
+.item {
   text-align: center;
+}
+.item img {
   margin: 0 auto;
 }
-
-figure img {
-  z-index: 50;
+.glyphicon {
+  color: black;
 }
-
-.img_container {
-  position: relative;
-  max-width: 960px;
-  height: 403px;
-  text-align: center;
-  overflow: hidden;
+.carousel-control.right,
+.carousel-control.left {
+  background: none;
 }
-
-figcaption {
-  text-align: left;
-  z-index: 100;
-  background: url(../images/bg/bg-title.gif) 0 0 #f0f0f0;
-  padding: 5px 20px;
-  border-bottom: 1px solid #adadad;
+.carousel-indicators {
+  bottom: 0;
+}
+.carousel-indicators .active {
+  background-color: #25333b;
+}
+.carousel-indicators li {
+  border: 1px solid #25333b;
 }
 
 

@@ -7,6 +7,8 @@
     <title>Graham Schmidt | Software Engineer</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,198 +30,160 @@
 
     </script>
 
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+        $("nav ul li a[href^='#']").on('click', function(e) {
+           e.preventDefault();
+           var hash = this.hash;
+
+           $('html, body').animate({
+               scrollTop: $(this.hash).offset().top
+             }, 1000, function() {
+
+             // when done, add hash to url
+             // (default click behaviour)
+             window.location.hash = hash;
+           });
+        });
+      });
+    </script>
+
   </head>
   <body>
 
   <header>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/resume">Resume</a>
-          </li>
-        </ul>
-        <a href="/">
-          <div class="navbar-header logo"></div>
-        </a>
+    <nav class="navbar" role="navigation">
+      <div class="container-fluid top-header">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="files/graham-schmidt-software-engineer.pdf">Resume</a>
+            </li>
+          </ul>
       </div>
     </nav>
+    <div class="logo"></div>
 
     <h1>Hi, I'm Graham</h1>
     <p>I work as a full-time software engineer for <a href="http://www.sermo.com/">Sermo</a>. I’m passionate about web technologies, love craft beer, and play a mean bagpipe.</p>
-    <img src="images/graham-schmidt-software-engineer.jpg" alt="Graham Schmidt - Software Engineer" class="profile shadow" width="189" height="187" />
+    <div class="profile shadow"></div>
   </header>
 
-  <section class="projects container">
-    <h2>Projects</h2>
-    <figure>
-        <ul id="slider">
-            <li>
-                <h2><a href="http://www.schmidtg.com/projects/nextlex">Project: NextLex (mobile web app)</a></h2>
-                <p>Technologies: Google Maps API, PHP, Javascript, jQuery Mobile, MySQL, HTML/CSS, Photoshop</p>
+  <div class="container">
+    <div id="projects" class="row projects">
+      <div id="carousel-homepage" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-slide-1" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-slide-2" data-slide-to="1" class=""></li>
+          <li data-target="#carousel-slide-3" data-slide-to="2" class=""></li>
+          <li data-target="#carousel-slide-4" data-slide-to="3" class=""></li>
+          <li data-target="#carousel-slide-5" data-slide-to="4" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active" id="carousel-slide-1">
+            <h2><a href="http://www.schmidtg.com/projects/nextlex">NextLex (mobile web app)</a></h2>
+            <p>Technologies: Google Maps API, PHP, Javascript, jQuery Mobile, MySQL, HTML/CSS, Photoshop</p>
+            <a href="http://www.schmidtg.com/projects/nextlex">
+              <img data-src="images/projects/nextlex/nextlex.home.png" alt="NextLex - Lexpress bus schedule" src="images/projects/nextlex/nextlex.home.png">
+            </a>
+          </div>
+          <div class="item" id="carousel-slide-2">
+            <h2><a href="http://www.winnipegscottishfestival.org/">Winnipeg Scottish Festival</a></h2>
+            <p>Technologies: HTML/CSS, Javascript, Photoshop</p>
+            <a href="http://www.winnipegscottishfestival.org/">
+              <img data-src="images/projects/wsf/winnipeg-scottish-festival.png" alt="Winnipeg Scottish Festival" src="images/projects/wsf/winnipeg-scottish-festival.png">
+            </a>
+          </div>
+          <div class="item" id="carousel-slide-3">
+            <h2><a href="http://www.eventry.net/">Eventry.net</a></h2>
+            <p>Technologies: Codeigniter, PHP, Javascript, jQuery, MySQL, HTML/CSS, Photoshop</p>
 
-                <a href="http://www.schmidtg.com/projects/nextlex">
-                    <img src="images/projects/nextlex/nextlex.home.png" alt="NextLex - Lexpress bus schedule" />
-                </a>
-            </li>
-            <li>
-                <h2><a href="http://www.eventry.net/">Project: Eventry.net</a></h2>
-                <p>Technologies: Codeigniter, PHP, Javascript, jQuery, MySQL, HTML/CSS, Photoshop</p>
+            <a href="http://www.eventry.net/">
+              <img data-src="images/projects/eventry/eventry.net.png" alt="Eventry.net" src="images/projects/eventry/eventry.net.png">
+            </a>
+          </div>
+          <div class="item" id="carousel-slide-4">
+            <h2><a href="http://www.cmapllc.com/">CMAP LLC</a></h2>
+            <p>Technologies: Wordpress, PHP, Javascript, MySQL, HTML/CSS, Photoshop</p>
 
-                <a href="http://www.eventry.net" target="_blank">
-                    <img src="images/projects/eventry/eventry.net.png" alt="Eventry.net - Home screen" />
-                </a>
-            </li>
-            <li>
-                <h2><a href="http://www.saskhighland.ca/">Project: Saskhighland.ca</a></h2>
-                <p>Technologies: Laravel, PHP, Javascript, MySQL, HTML/CSS, Photoshop</p>
+            <a href="http://www.cmapllc.com">
+              <img data-src="images/projects/cmap/cmapllc.com.png" alt="CMAP LLC" src="images/projects/cmap/cmapllc.com.png">
+            </a>
+          </div>
+          <div class="item" id="carousel-slide-5">
+            <h2><a href="http://www.saskhighland.ca/">Saskhighland.ca</a></h2>
+            <p>Technologies: Laravel, PHP, Javascript, MySQL, HTML/CSS, Photoshop</p>
 
-                <a href="http://www.saskhighland.ca/">
-                    <img src="images/projects/saskhighland/saskhighland.ca.png" alt="Saskatchewan Highland Gathering &amp; Celtic Gathering" />
-                </a>
-            </li>
-            <li>
-                <h2><a href="http://www.cmapllc.com/">Project: CMAP LLC</a></h2>
-                <p>Technologies: Wordpress, PHP, Javascript, MySQL, HTML/CSS, Photoshop</p>
+            <a href="http://www.saskhighland.ca/">
+              <img data-src="images/projects/saskhighland/saskhighland.ca.png" alt="Saskatchewan Highland Gathering &amp; Celtic Gathering" src="images/projects/saskhighland/saskhighland.ca.png">
+            </a>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-homepage" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-homepage" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
 
-                <a href="http://www.cmapllc.com" target="_blank">
-                    <img src="images/projects/cmap/cmapllc.com.png" alt="Cmap LLC" />
-                </a>
-            </li>
-            <li>
-                <h2><a href="http://www.winnipegscottishfestival.org/">Project: Winnipeg Scottish Festival</a></h2>
-                <p>Technologies: HTML/CSS, Javascript, Photoshop</p>
+    <div id="about" class="row">
+      <div class="col-md-8">
+        <h2>About me</h2>
+        <p>
+        Give me any project, and I'll give 110% effort every time in order to make things succeed. My greatest pleasure is seeing things work well and to the satisfaction of the stakeholders.
+        </p>
 
-                <a href="http://www.winnipegscottishfestival.org" target="_blank">
-                    <img src="images/projects/wsf/winnipeg-scottish-festival.png" alt="Winnipeg Scottish Festival" />
-                </a>
-            </li>
+        <p>
+        I brand myself as a full stack developer who loves writing OOP code all-day either back-end or front-end. I was also a graphic designer for a number of years, so I've got a firm grounding in UI.
+        </p>
+
+        <p>
+        Learning is a big part of my life, and I spend much of my spare time taking formal classes, or learning new technologies that'll help me rock out with the next big project.
+        </p>
+
+        <h3>
+        Environment Setup
+        </h3>
+        <p>
+        Sublime with VIM bindings. Combining the slick and smoothness of Sublime with the power of timeless VIM. Shortcuts have never felt so useful.
+        </p>
+
+        <h3>
+        Fun Fact
+        </h3>
+        <p>
+        Currently my wife and I call the great city of Boston home,  but my favorite time of year is flying home to the Canadian prairies to make homemade sausage with my family every Xmas.
+        </p>
+      </div>
+    </div>
+
+    <div id="contact" class="row">
+      <div class="col-md-8">
+        <h2>Where you can find me</h2>
+        <ul>
+          <li>
+              <a href="https://github.com/schmidtg">Github</a>
+          </li>
+          <li>
+              <a href="http://www.linkedin.com/in/grahamschmidt/">Linkedin</a>
+          </li>
+          <li>
+              <a href="http://www.couchsurfing.org/profile.html?id=3IFIJ65">Couchsurfing</a>
+          </li>
         </ul>
-    </figure>
+      </div>
+    </div>
+  </div>
 
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-
-  </section>
-
-  <section class="projects container">
-    <h2>Projects</h2>
-    <h2><a href="http://www.eventry.net/">Eventry.net</a></h2>
-    <p>Technologies: PHP, Javascript, MySQL, HTML/CSS</p>
-
-    <figure>
-        <ul id="slider">
-            <li>
-                <img src="images/projects/eventry/1-eventry-home.png" alt="Eventry.net - Home screen" />
-                <figcaption>
-                    Login Screen
-                </figcaption>
-            </li>
-            <li>
-                <img src="images/projects/eventry/2-eventry-choose.png" alt="Eventry.net - Choose screen" />
-                <figcaption>
-                    Choose Screen
-                </figcaption>
-            </li>
-            <li>
-                <img src="images/projects/eventry/3-eventry-form.png" alt="Eventry.net - Form screen" />
-                <figcaption>
-                    Form Screen
-                </figcaption>
-            </li>
-            <li>
-                <img src="images/projects/eventry/4-eventry-confirm.png" alt="Eventry.net - Confirmation screen" />
-                <figcaption>
-                    Confirmation Screen
-                </figcaption>
-            </li>
-            <li>
-                <img src="images/projects/eventry/5-eventry-dash.png" alt="Eventry.net - Dashboard screen" />
-                <figcaption>
-                    Dashboard Screen
-                </figcaption>
-            </li>
-        </ul>
-    </figure>
-
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-
-  </section>
-
-  <section class="container container-960">
-
-    <h2>About me</h2>
-    <p>
-    Give me any project, and I'll give 110% effort every time in order to make things succeed. My greatest pleasure is seeing things work well and to the satisfaction of the stakeholders.
-    </p>
-
-    <p>
-    I brand myself as a full stack developer who loves writing OOP code all-day either back-end or front-end. I was also a graphic designer for a number of years, so I've got a firm grounding in UI.
-    </p>
-
-    <p>
-    Learning is a big part of my life, and I spend much of my spare time taking formal classes, or learning new technologies that'll help me rock out with the next big project.
-    </p>
-
-    <h3>
-    Proudest Achievement
-    </h3>
-    <p>
-    VIM...I swear by it now. Shortcuts have never felt so useful.
-    </p>
-
-    <h3>
-    Fun Fact
-    </h3>
-    <p>
-    Currently my wife and I call the great city of Boston home,  but my favorite time of year is flying home to the Canadian prairies to make homemade sausage with my family every Xmas.
-    </p>
-
-    <h2>Where you can find me</h2>
-    <ul>
-        <li>
-            <a href="https://github.com/schmidtg">Github</a>
-        </li>
-        <li>
-            <a href="http://www.linkedin.com/in/grahamschmidt/">Linkedin</a>
-        </li>
-        <li>
-            <a href="http://www.couchsurfing.org/profile.html?id=3IFIJ65">Couchsurfing</a>
-        </li>
-        <li>
-            <a href="https://twitter.com/teamgraham99">Twitter</a>
-        </li>
-    </ul>
-
-  </section>
-
-
-  <footer>
-      <nav>
-          <ul>
-              <li>
-                  <a href="/">Home</a>
-              </li>
-              <li>
-                  <a href="/about">About</a>
-              </li>
-              <li>
-                  <a href="/resume">Resume</a>
-              </li>
-          </ul>
-      </nav>
-  </footer>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </body>
 </html>
